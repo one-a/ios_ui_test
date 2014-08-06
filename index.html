@@ -112,11 +112,6 @@ input,textarea,select,button,label{
 .checkbox:before{
   content:'';
   display:none;
-}
-input:checked+.checkbox:before{
-  display:block;
-}
-.checkbox:before{
   position:absolute;
   top:7px;
   left:5px;
@@ -129,6 +124,9 @@ input:checked+.checkbox:before{
   -ms-transform:rotate(-45deg);
   -o-transform:rotate(-45deg);
   transform:rotate(-45deg);
+}
+input:checked+.checkbox:before{
+  display:block;
 }
 .checkbox_text{
   display: block;
