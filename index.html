@@ -101,9 +101,6 @@ input,textarea,select,button,label{
   display:block;
   border:1px solid #66cccc;
   border-radius:9px;
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
   font-size: 13px;
   color: #66cccc;
   padding: 0 0 0 26px;
@@ -112,11 +109,6 @@ input,textarea,select,button,label{
 .checkbox:before{
   content:'';
   display:none;
-}
-input:checked+.checkbox:before{
-  display:block;
-}
-.checkbox:before{
   position:absolute;
   top:7px;
   left:5px;
@@ -129,6 +121,9 @@ input:checked+.checkbox:before{
   -ms-transform:rotate(-45deg);
   -o-transform:rotate(-45deg);
   transform:rotate(-45deg);
+}
+input:checked+.checkbox:before{
+  display:block;
 }
 .checkbox_text{
   display: block;
