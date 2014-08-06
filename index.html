@@ -84,7 +84,6 @@ input,textarea,select,button,label{
 
 .option{
   display:inline-block;
-  vertical-align:top;
   position:relative;
   width:170px;
   height:28px;
@@ -96,14 +95,10 @@ input,textarea,select,button,label{
 .option>input{
   position:absolute;
   left:0;
-  width:26px;
-  height:inherit;
   opacity:0;
 }
 .checkbox{
   display:block;
-  height:100%;
-  background:#fff;
   border:1px solid #66cccc;
   border-radius:9px;
   -webkit-box-sizing:border-box;
@@ -118,12 +113,6 @@ input,textarea,select,button,label{
   content:'';
   display:none;
 }
-input:hover+.checkbox,.checkbox:hover{
-  border-color:#ccc;
-}
-input:focus+.checkbox,input.focus+.checkbox{
-  border-color:#66cccc;
-}
 input:checked+.checkbox:before{
   display:block;
 }
@@ -133,7 +122,7 @@ input:checked+.checkbox:before{
   left:5px;
   width:16px;
   height:7px;
-  border:solid #aaa;
+  border:solid #66cccc;
   border-width:0 0 3px 3px;
   -webkit-transform:rotate(-45deg);
   -moz-transform:rotate(-45deg);
@@ -141,12 +130,8 @@ input:checked+.checkbox:before{
   -o-transform:rotate(-45deg);
   transform:rotate(-45deg);
 }
-input:focus+.checkbox:before,input.focus+.checkbox:before{
-  border-color:#66cccc;
-}
 .checkbox_text{
   display: block;
-  height: 100%;
   border-left:1px solid #66cccc;
   padding-left: 13px;
 }
