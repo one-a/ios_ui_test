@@ -95,6 +95,8 @@ input,textarea,select,button,label{
 .option>input{
   position:absolute;
   left:0;
+width:inherit;
+height:inherit;
   opacity:0;
 }
 .checkbox{
@@ -130,6 +132,46 @@ input:checked+.checkbox:before{
   border-left:1px solid #66cccc;
   padding-left: 13px;
 }
+
+
+.option_radio{
+  display:inline-block;
+  vertical-align:top;
+  position:relative;
+  width:24px;
+  height:24px;
+}
+.option_radio>input{
+  position:absolute;
+  left:0;
+  opacity:0;
+}
+.radio{
+  display:block;
+  width:100%;
+  height:100%;
+  background:#fff;
+  border:1px solid #999;
+  border-radius:50%;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+.radio:before{
+  content:'';
+  display:none;
+}
+input:checked+.radio:before{
+  display:block;
+}
+.radio:before{
+  margin:3px;
+  width:16px;
+  height:16px;
+  background:#5bc8d0;
+  border-radius:50%;
+}
+
 </style>
 </head>
 <body>
@@ -148,5 +190,14 @@ input:checked+.checkbox:before{
   <span class="checkbox"><span class="checkbox_text">上記内容に同意する</span></span>
 </label>
 
+<label class="option_radio">
+  <input type="radio" name="radio2" class="focus" checked="">
+  <span class="radio"></span>
+</label>
+
+<label class="option_radio">
+  <input type="radio" name="radio2" class="focus" checked="">
+  <span class="radio"></span>
+</label>
 </body>
 </html>
